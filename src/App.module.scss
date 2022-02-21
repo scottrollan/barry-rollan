@@ -1,0 +1,42 @@
+@import './styles/custom-properties.module.scss';
+
+.App {
+  color: var(--black);
+}
+
+.homeGrid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sideNav) auto 20vw auto 60vw auto; //6 columns
+  grid-template-rows: 2fr 8vw 8vw 8vw 8vw 8vw 8vw 1fr;
+  z-index: 999;
+}
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 5;
+}
+.name {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.menuOptions {
+  grid-column-start: 5;
+  grid-row-start: 2;
+  grid-row-end: 9;
+}
+.option {
+  font-size: 11vw;
+  font-weight: 500;
+  transition: 500ms;
+}
+
+.option:hover {
+  transform: scale(1.2) skew(10deg) translateX(15px);
+  cursor: pointer;
+}
