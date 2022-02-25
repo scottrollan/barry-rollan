@@ -1,0 +1,43 @@
+/* ANIMATIONS AND ANIMATION CLASSES */
+@import './styles/custom-properties.module.scss';
+
+.pageUp {
+  display: flex;
+  animation: pageUp var(--pageUpTiming) linear;
+  -moz-animation: pageUp var(--pageUpTiming) linear;
+  -webkit-animation: pageUp var(--pageUpTiming) linear;
+}
+
+@keyframes pageUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-moz-keyframes pageUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes pageUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
