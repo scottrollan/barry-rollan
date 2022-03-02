@@ -1,5 +1,4 @@
 import React from 'react';
-import SideNav from './SideNav';
 import photo from '../assets/photo.jpg';
 import styles from './About.module.scss';
 
@@ -40,9 +39,9 @@ export default function About() {
           <li>Sanity CMS</li>
         </ul>
       </div>
-      <div className={styles.navWrapper}>
-        <SideNav />
-      </div>
+      {/* <div className={styles.navWrapper}>
+        <SideNav onPage="about" pageOut="pageDown" />
+      </div> */}
     </div>
   );
 }

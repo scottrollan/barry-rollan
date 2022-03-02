@@ -8,14 +8,19 @@
   min-width: 100vw;
   display: grid;
   grid-template-columns: [left] var(--sideNav) auto 20vw auto 60vw auto [right];
-  grid-template-rows: [top] 2fr 8vw 8vw 8vw 8vw 8vw 8vw 1fr [bottom];
+  grid-template-rows: [top] 2fr calc(var(--imageHeight) * 0.5) 8vw 8vw 8vw 8vw 8vw 1fr [bottom];
 }
 .navWrapper {
   grid-column: left;
-  grid-row-start: bottom;
+  grid-row: top;
+  transform: translateY(100vh);
+  z-index: 3;
 }
-.aboutWrapper {
+.pageWrapper {
+  grid-column: left / right;
+  grid-row: top / bottom;
   display: none;
+  z-index: 2;
 }
 .aboutSection {
   display: flex;
@@ -43,7 +48,7 @@
 }
 
 .option:hover {
-  transform: skew(-10deg) translateX(88px);
+  transform: skew(-10deg) translateX(24px);
   cursor: pointer;
 }
 

@@ -1,19 +1,104 @@
 /* ANIMATIONS AND ANIMATION CLASSES */
 @import './styles/custom-properties.module.scss';
 
+.darkMode {
+  color: var(--beige);
+}
+
+/* ////////// Fade Out ////////// */
+.fadeOut {
+  animation: fadeOut linear var(--pageMoveTiming);
+  -moz-animation: fadeOut linear var(--pageMoveTiming);
+  -webkit-animation: fadeOut linear var(--pageMoveTiming);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* ////////// Fade In ////////// */
+.fadeIn {
+  display: grid;
+  animation: fadeIn var(--pageMoveTiming) linear;
+  -moz-animation: fadeIn var(--pageMoveTiming) linear;
+  -webkit-animation: fadeIn var(--pageMoveTiming) linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ////////// Page Up ////////// */
 .pageUp {
-  display: flex;
-  animation: pageUp var(--pageUpTiming) linear;
-  -moz-animation: pageUp var(--pageUpTiming) linear;
-  -webkit-animation: pageUp var(--pageUpTiming) linear;
+  display: grid;
+  animation: pageUp var(--pageMoveTiming) linear;
+  -moz-animation: pageUp var(--pageMoveTiming) linear;
+  -webkit-animation: pageUp var(--pageMoveTiming) linear;
 }
 
 @keyframes pageUp {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(100%);
   }
-  25% {
-    transform: translateY(50%);
+  10% {
+    transform: translateY(80%);
+  }
+  50% {
+    transform: translateY(75%);
+  }
+  85% {
+    transform: translateY(10%);
   }
   100% {
     transform: translateY(0%);
@@ -21,10 +106,16 @@
 }
 @-moz-keyframes pageUp {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(100%);
+  }
+  10% {
+    transform: translateY(80%);
   }
   50% {
-    transform: translateY(-25%);
+    transform: translateY(75%);
+  }
+  85% {
+    transform: translateY(10%);
   }
   100% {
     transform: translateY(0%);
@@ -32,12 +123,78 @@
 }
 @-webkit-keyframes pageUp {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(100%);
+  }
+  10% {
+    transform: translateY(80%);
   }
   50% {
-    transform: translateY(-25%);
+    transform: translateY(75%);
+  }
+  85% {
+    transform: translateY(10%);
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+/* ////////// Page Down //////////  */
+.pageDown {
+  display: grid;
+  animation: pageDown var(--pageMoveTiming) linear;
+  -moz-animation: pageDown var(--pageMoveTiming) linear;
+  -webkit-animation: pageDown var(--pageMoveTiming) linear;
+}
+
+@keyframes pageDown {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  60% {
+    transform: translateY(85%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@-moz-keyframes pageDown {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  60% {
+    transform: translateY(85%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+@-webkit-keyframes pageDown {
+  0% {
+    transform: translateY(0%);
+  }
+  10% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  60% {
+    transform: translateY(85%);
+  }
+  100% {
+    transform: translateY(100vh);
   }
 }

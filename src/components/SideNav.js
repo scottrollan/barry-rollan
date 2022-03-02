@@ -2,9 +2,16 @@ import React from 'react';
 import $ from 'jquery';
 import styles from './SideNav.module.scss';
 
-export default function SideNav() {
+export default function SideNav({ currentPage }) {
   const goHome = () => {
-    $('.notHome').hide();
+    console.log(currentPage);
+    $(`#${currentPage}Wrapper`).removeClass('pageUp').addClass('pageDown');
+    setTimeout(() => {
+      $(`#${currentPage}Wrapper`).hide();
+      $('#sideNav').removeClass('darkMode');
+
+      $('.home').addClass('fadeOn');
+    }, 550);
   };
 
   const today = new Date();

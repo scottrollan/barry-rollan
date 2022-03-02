@@ -1,7 +1,9 @@
 :root {
   --beige: #eee7e3;
-  --black: #262525;
+  --black: #21230f;
   --sideNav: 40px;
   --imageHeight: 350px;
-  --pageUpTiming: 700ms;
+  --pageMoveTiming: 600ms;
+  --doublePageMoveTiming: 1200ms;
+  --triplePageMoveTiming: 1800ms;
 }

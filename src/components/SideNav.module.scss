@@ -6,6 +6,7 @@
   align-items: center;
   width: 100vh;
   height: var(--sideNav);
+  background: transparent;
   transform: translateX(calc(-1 * var(--sideNav))) rotate(-90deg);
   transform-origin: var(--sideNav) 0;
 }
