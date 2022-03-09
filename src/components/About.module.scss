@@ -17,10 +17,7 @@
 .aboutGrid > * {
   color: var(--beige);
 }
-.navWrapper {
-  grid-column: left;
-  grid-row-start: bottom;
-}
+
 .aboutTitle {
   font-size: calc(var(--imageHeight) * 0.5);
   grid-row: 2;
@@ -57,34 +54,40 @@
 @keyframes titleUp {
   0% {
     transform: translateY(calc(var(--imageHeight) * 0.5));
+    opacity: 0;
   }
   50% {
     transform: translateY(calc(var(--imageHeight) * 0.5));
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 @-moz-keyframes titleUp {
   0% {
     transform: translateY(calc(var(--imageHeight) * 0.5));
+    opacity: 0;
   }
   50% {
     transform: translateY(calc(var(--imageHeight) * 0.5));
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 @-webkit-keyframes titleUp {
   0% {
     transform: translateY(translateY(calc(var(--imageHeight) * 0.5)));
+    opacity: 0;
   }
   50% {
     transform: translateY(calc(var(--imageHeight) * 0.5));
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 

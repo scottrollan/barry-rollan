@@ -1,9 +1,17 @@
+$timing: 700;
+$doubleTiming: 1400;
+$tripleTiming: 2100;
+
 :root {
   --beige: #eee7e3;
   --black: #21230f;
   --sideNav: 40px;
   --imageHeight: 350px;
-  --pageMoveTiming: 600ms;
-  --doublePageMoveTiming: 1200ms;
-  --triplePageMoveTiming: 1800ms;
+  --pageMoveTiming: #{$timing}ms;
+  --doublePageMoveTiming: 1400ms;
+  --triplePageMoveTiming: 2100ms;
+}
+
+:export {
+  pageTiming: $timing;
 }
