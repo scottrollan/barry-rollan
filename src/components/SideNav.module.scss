@@ -24,7 +24,11 @@
   cursor: pointer;
   text-decoration: line-through;
 }
+.icons {
+  display: flex;
+}
 a {
+  margin: 0 5px;
   color: inherit;
   text-decoration: none;
 }
