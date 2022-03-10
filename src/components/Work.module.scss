@@ -26,12 +26,16 @@
   height: 100%;
 }
 .workWords {
-  grid-row: 5 / 7;
+  grid-row: 5;
   grid-column: 3;
 }
 .metricClock {
-  grid-row: 8 / bottom;
+  grid-row: 7;
   grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .portfolioList {
   grid-row: 3 / bottom;

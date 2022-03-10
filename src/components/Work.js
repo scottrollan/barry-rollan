@@ -1,4 +1,5 @@
 import React from 'react';
+import MetricClock from '../components/MetricClock';
 import portfolio from '../data/Portfolio';
 import styles from './Work.module.scss';
 
@@ -20,7 +21,9 @@ export default function Work() {
           solely by me.
         </p>
       </div>
-      <div className={styles.metricClock}>Metric Clock</div>
+      <div className={styles.metricClock}>
+        <MetricClock />
+      </div>
       <div className={styles.portfolioList}>
         {portfolio.map((p, i) => {
           const allCapLabel = p.label.toUpperCase();

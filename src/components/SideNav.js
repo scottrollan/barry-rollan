@@ -41,9 +41,11 @@ export default function SideNav({ currentPage, setCurrentPage }) {
       >
         HOME
       </div>
-      <div className={styles.icons}>
+      <div
+        className={styles.icons}
+        style={{ display: currentPage === 'home' ? 'inherit' : 'none' }}
+      >
         <a
-          style={{ display: currentPage === 'home' ? 'inherit' : 'none' }}
           href="https://github.com/scottrollan/"
           noopener
           noreferrer
@@ -52,7 +54,6 @@ export default function SideNav({ currentPage, setCurrentPage }) {
           <i className="fab fa-github-square fa-2x"></i>
         </a>
         <a
-          style={{ display: currentPage === 'home' ? 'inherit' : 'none' }}
           href="https://www.linkedin.com/in/barry-rollan-2aa5a8/"
           noopener
           noreferrer
