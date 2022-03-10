@@ -10,6 +10,9 @@ $tripleTiming: 2100;
   --pageMoveTiming: #{$timing}ms;
   --doublePageMoveTiming: 1400ms;
   --triplePageMoveTiming: 2100ms;
+  @media (pointer: coarse) {
+    --imageHeight: 20vh;
+  }
 }
 
 :export {

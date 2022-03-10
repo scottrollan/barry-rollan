@@ -22,12 +22,20 @@
 }
 .homeButton:hover {
   cursor: pointer;
+  text-decoration: line-through;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 @media (pointer: coarse) {
   .sideNav {
-    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
     flex-direction: row-reverse;
     transform: none;
+  }
+  ul {
+    list-style-type: none;
   }
 }

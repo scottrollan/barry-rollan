@@ -26,18 +26,27 @@ export default function SideNav({ currentPage, setCurrentPage }) {
       </div>
       <div
         style={{
-          borderTop: '1px solid var(--black)',
+          borderTop:
+            currentPage === 'home'
+              ? '1px solid var(--black)'
+              : '1px solid var(--beige)',
           width: '12vh',
         }}
       ></div>
       <div
-        style={{ visibility: currentPage === 'home' ? 'hidden' : 'visible' }}
+        style={{ display: currentPage === 'home' ? 'none' : 'inherit' }}
         className={styles.homeButton}
         id="homeButton"
         onClick={() => goHome()}
       >
         HOME
       </div>
+      <a
+        style={{ display: currentPage === 'home' ? 'inherit' : 'none' }}
+        href="https://github.com/scottrollan/"
+      >
+        <i className="fab fa-github-square fa-2x"></i>
+      </a>
     </div>
   );
 }
