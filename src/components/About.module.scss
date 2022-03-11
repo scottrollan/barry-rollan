@@ -20,7 +20,7 @@
 }
 
 .aboutTitle {
-  font-size: calc(var(--imageHeight) * 0.5);
+  font-size: var(--megaFont);
   grid-row: 2;
   grid-column: 3 / 4;
   animation: titleUp var(--triplePageMoveTiming);
@@ -57,7 +57,7 @@
     grid-template-rows: var(--sideNav) 5vh var(--imageHeight) 2vh auto auto;
   }
   .aboutTitle {
-    font-size: xx-large;
+    font-size: var(--megaFont);
     grid-row: 3;
     grid-column: 2;
     display: flex;

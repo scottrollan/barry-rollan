@@ -17,7 +17,7 @@
 }
 
 .workTitle {
-  font-size: 10vw;
+  font-size: var(--megaFont);
   grid-row: 4;
   grid-column: 3;
   display: flex;
@@ -91,7 +91,7 @@
   flex-direction: column;
 }
 .pLabel {
-  font-size: 2vw;
+  font-size: var(--paragraphFont);
 }
 .pLabel:hover {
   transform: skew(-10deg) translateX(8px);
@@ -99,9 +99,9 @@
   text-decoration: line-through;
 }
 .description {
-  font-size: 1.3vw;
+  font-size: var(--paragraphFont);
 }
-@media screen and (max-width: 1100px) {
+@media (pointer: coarse) {
   .workGrid {
     grid-template-columns: 5vw 90vw 5vw;
     grid-template-rows: var(--sideNav) 2vw auto auto 2vw auto auto auto;
@@ -109,15 +109,15 @@
   .workTitle {
     grid-row: 3;
     grid-column: 2;
-    font-size: xx-large;
+    font-size: var(--megaFont);
   }
   .workWords {
     grid-row: 4;
     grid-column: 2;
-    font-size: medium;
+    font-size: var(--standardFont);
   }
   .techList {
-    font-size: 1.5vh;
+    font-size: var(--paragraphFont);
   }
   .portfolioList {
     grid-row: 6;
@@ -130,10 +130,10 @@
     margin: 4px 0;
   }
   .pLabel {
-    font-size: medium;
+    font-size: var(--titleFont);
   }
   .description {
-    font-size: small;
+    font-size: var(--paragraphFont);
   }
   .metricClock {
     grid-row: 7;

@@ -19,7 +19,7 @@
 .hello {
   grid-column: 3;
   grid-row: 4;
-  font-size: 20vh;
+  font-size: var(--megaFont);
 }
 .simple {
   grid-column: 3;
@@ -47,7 +47,7 @@
   text-decoration: line-through;
 }
 
-@media screen and (max-width: 1100px) {
+@media (pointer: coarse) {
   .contactGrid {
     grid-template-columns: 5vw 90vw 5vw;
     grid-template-rows: var(--sideNav) 20vh 20vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh auto;
