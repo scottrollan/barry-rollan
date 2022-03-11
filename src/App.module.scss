@@ -53,7 +53,7 @@
 @media (pointer: coarse) {
   .homeGrid {
     grid-template-columns: [left] 1fr 30vw 1fr 50vw 1fr [right];
-    grid-template-rows: [top] var(--sideNav) 5% 10% 10% 10% auto [bottom];
+    grid-template-rows: [top] var(--sideNav) 5% 10% 10% 10% 10vw 50%[bottom];
   }
   .aboutSection {
     grid-column: 2 / 5;
@@ -62,9 +62,6 @@
   }
   .menuOptions {
     grid-column: 4;
-    grid-row: 3;
-  }
-  .option {
-    font-size: var(--megaFont);
+    grid-row: 4;
   }
 }
