@@ -41,11 +41,9 @@ export default function Work() {
                   ))}
                 </div>
               </div>
-              <div className={styles.pWords}>
-                <div className={styles.pLabel} onClick={() => goToApp(p.href)}>
-                  {allCapLabel}
-                </div>
-                <div>{p.description}</div>
+              <div className={styles.pWords} onClick={() => goToApp(p.href)}>
+                <div className={styles.pLabel}>{allCapLabel}</div>
+                <div className={styles.description}>{p.description}</div>
               </div>
             </div>
           );

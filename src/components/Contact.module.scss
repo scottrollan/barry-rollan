@@ -9,12 +9,63 @@
   display: grid;
   grid-template-columns:
     [left] var(--sideNav)
-    [leftIndent] auto auto [middle] auto auto [rightIndent] var(--sideNav)
+    10vw auto 10vw var(--sideNav)
     [right];
-  grid-template-rows:
-    [top] var(--sideNav) [topMargin] calc(var(--imageHeight) * 0.5)
-    [middle] calc(var(--imageHeight) * 0.5) auto [bottom];
+  grid-template-rows: var(--sideNav) 2fr 20vh 20vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 1fr;
 }
 .contactGrid > * {
   color: var(--beige);
+}
+.hello {
+  grid-column: 3;
+  grid-row: 4;
+  font-size: 20vh;
+}
+.simple {
+  grid-column: 3;
+  grid-row: 7;
+}
+.email {
+  grid-column: 3;
+  grid-row: 9;
+}
+.online {
+  grid-column: 3;
+  grid-row: 11;
+}
+.email,
+.online {
+  display: flex;
+}
+.email > *,
+.online > * {
+  margin: 0 5px;
+}
+.hoverable:hover {
+  transform: skew(-10deg) translateX(4px);
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 1100px) {
+  .contactGrid {
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: var(--sideNav) 20vh 20vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh 3vh auto;
+  }
+  .hello {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .simple {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  .email {
+    grid-column: 2;
+    grid-row: 7;
+  }
+  .online {
+    grid-column: 2;
+    grid-row: 9;
+  }
 }
