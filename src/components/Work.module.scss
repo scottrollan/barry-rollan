@@ -91,7 +91,7 @@
   flex-direction: column;
 }
 .pLabel {
-  font-size: var(--paragraphFont);
+  // font-size: var(--paragraphFont);
 }
 .pLabel:hover {
   transform: skew(-10deg) translateX(8px);
@@ -99,7 +99,7 @@
   text-decoration: line-through;
 }
 .description {
-  font-size: var(--paragraphFont);
+  // font-size: var(--paragraphFont);
 }
 @media (pointer: coarse) {
   .workGrid {
@@ -109,16 +109,14 @@
   .workTitle {
     grid-row: 3;
     grid-column: 2;
-    font-size: var(--megaFont);
+    // font-size: var(--megaFont);
   }
   .workWords {
     grid-row: 4;
     grid-column: 2;
-    font-size: var(--standardFont);
+    // font-size: var(--standardFont);
   }
-  .techList {
-    font-size: var(--paragraphFont);
-  }
+
   .portfolioList {
     grid-row: 6;
     grid-column: 2;
@@ -129,11 +127,26 @@
     border-radius: 1em;
     margin: 4px 0;
   }
-  .pLabel {
+  .imageWrapper {
+    height: 32vw;
+    width: 32vw;
+    margin: 0 1vw;
+  }
+  .imageWrapper:hover {
+    height: auto;
+  }
+  .techList {
+    // font-size: x-small;
+  }
+  .pWords {
+    margin: 0 1vw;
+    width: calc(100vw - (40vw + 8px));
+  }
+  .pWords .pLabel {
     font-size: var(--titleFont);
   }
   .description {
-    font-size: var(--paragraphFont);
+    // font-size: var(--paragraphFont);
   }
   .metricClock {
     grid-row: 7;
