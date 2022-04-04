@@ -12,6 +12,7 @@ export default function Contact() {
           className={styles.hoverable}
           href="mailto:barry@barryrollan.com?subject=Hello from the internet!"
           target="_blank"
+          rel="noreferrer noopener"
         >
           barry@barryrollan.com
         </a>

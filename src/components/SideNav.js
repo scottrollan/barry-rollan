@@ -47,17 +47,15 @@ export default function SideNav({ currentPage, setCurrentPage }) {
       >
         <a
           href="https://github.com/scottrollan/"
-          noopener
-          noreferrer
           target="_blank"
+          rel="noreferrer noopener"
         >
           <i className="fab fa-github-square fa-2x"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/barry-rollan-2aa5a8/"
-          noopener
-          noreferrer
           target="_blank"
+          rel="noreferrer noopener"
         >
           <i className="fab fa-linkedin fa-2x"></i>
         </a>

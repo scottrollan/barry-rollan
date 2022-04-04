@@ -22,47 +22,51 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.homeGrid} id="home">
-      <div className={[`${styles.aboutSection} home`]}>
-        <div className={styles.name}>Barry Rollan</div>
-        <div className={styles.title}>Full-Stack Developer</div>
-        <div className={styles.tagline}>
-          Creating unique digital experiences in Marietta, Georgia
-        </div>
-      </div>
-      <div className={[`${styles.menuOptions} home`]}>
-        <div className={styles.option} onClick={() => goToPage('work')}>
-          WORK
-        </div>
-        <div className={styles.option} onClick={() => goToPage('about')}>
-          ABOUT
-        </div>
-        <div className={styles.option} onClick={() => goToPage('contact')}>
-          CONTACT
-        </div>
-      </div>
-      {[
-        { title: 'work', page: <Work /> },
-        { title: 'about', page: <About /> },
-        { title: 'contact', page: <Contact /> },
-      ].map((opt, i) => {
-        const option = opt.title;
-
-        return (
-          <div
-            key={`${option}${i}`}
-            className={[
-              `${styles.pageWrapper} ${
-                currentPage === option ? animations.pageUp : animations.pageDown
-              }`,
-            ]}
-            id={`${option}Wrapper`}
-          >
-            {opt.page}
+    <div className={styles.appWrapper} id="home">
+      <div className={[`${styles.home} home`]}>
+        <div className={[`${styles.menuOptions} home`]}>
+          <div className={styles.option} onClick={() => goToPage('work')}>
+            WORK
           </div>
-        );
-      })}
+          <div className={styles.option} onClick={() => goToPage('about')}>
+            ABOUT
+          </div>
+          <div className={styles.option} onClick={() => goToPage('contact')}>
+            CONTACT
+          </div>
+        </div>
+        {[
+          { title: 'work', page: <Work /> },
+          { title: 'about', page: <About /> },
+          { title: 'contact', page: <Contact /> },
+        ].map((opt, i) => {
+          const option = opt.title;
 
+          return (
+            <div
+              key={`${option}${i}`}
+              className={[
+                `${styles.pageWrapper} ${
+                  currentPage === option
+                    ? animations.pageUp
+                    : animations.pageDown
+                }`,
+              ]}
+              id={`${option}Wrapper`}
+            >
+              {opt.page}
+            </div>
+          );
+        })}
+
+        <div className={[`${styles.aboutSection} home`]}>
+          <div className={styles.name}>Barry Rollan</div>
+          <div className={styles.title}>Full-Stack Developer</div>
+          <div className={styles.tagline}>
+            Creating unique digital experiences in Marietta, Georgia
+          </div>
+        </div>
+      </div>
       <SideNav currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   );

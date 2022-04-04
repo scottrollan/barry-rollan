@@ -12,11 +12,12 @@ $tripleTiming: 2100;
   --triplePageMoveTiming: 2100ms;
   --standardFont: 17px;
   --titleFont: 20px;
-  --megaFont: 45px;
+  --megaFont: 7vw;
   --paragraphFont: 15px;
   @media (pointer: coarse) {
     --imageHeight: 20vh;
     --sideNav: 5vh;
+    --megaFont: 10vh;
   }
 }
 
