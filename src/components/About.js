@@ -4,10 +4,14 @@ import styles from './About.module.scss';
 
 export default function About() {
   return (
-    <div className={styles.aboutGrid} id="about">
-      <div className={styles.aboutTitle}>About</div>
-      <div className={styles.imageWrapper}>
-        <img src={photo} alt="" />
+    <div className={styles.aboutPage} id="about">
+      <div className={styles.titleAndImage}>
+        <div className={styles.titleWrapper}>
+          <div className={styles.aboutTitle}>About</div>
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={photo} alt="" />
+        </div>
       </div>
       <div className={styles.aboutMeWords}>
         <p>

@@ -54,7 +54,7 @@
   transition: background 2s ease;
 }
 .imageWrapper:hover {
-  background-image: none !important;
+  background-size: 0;
 }
 .techList {
   color: var(--black);
