@@ -40,8 +40,7 @@
   border: 1px solid var(--beige);
 }
 .imageWrapper {
-  background-color: var(--beige);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1vw;
@@ -55,15 +54,17 @@
   transition: background 2s ease;
 }
 .imageWrapper:hover {
-  background-image: linear-gradient(var(--beige));
+  background-image: none !important;
 }
 .techList {
   color: var(--black);
   position: relative;
+  border-radius: 1rem;
   min-height: 100%;
   padding: 1em;
   top: 100%;
   transition: all 1s ease-in;
+  font-size: smaller;
   z-index: 2;
 }
 .imageWrapper:hover > .techList {
@@ -126,6 +127,7 @@
     height: auto;
   }
   .techList {
+    font-size: medium;
   }
   .pWords {
     margin: 2vh 1vw;
