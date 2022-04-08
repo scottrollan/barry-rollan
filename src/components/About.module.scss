@@ -37,6 +37,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--black);
+  z-index: 3;
 }
 .imageWrapper > img {
   height: var(--imageHeight);
@@ -52,17 +54,12 @@
 }
 @media (pointer: coarse) {
   .titleAndImage {
-    flex-direction: column-reverse;
-    height: calc(var(--imageHeight) * 1.5);
+    flex-direction: column;
+    height: calc(var(--imageHeight) * 2);
   }
   .titleWrapper {
   }
   .aboutTitle {
-    font-size: var(--megaFont);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
   }
 
   .aboutMeWords {
