@@ -3,13 +3,8 @@ import $ from 'jquery';
 import styles from './SideNav.module.scss';
 import variables from '../styles/custom-properties.module.scss';
 
-export default function SideNav({ currentPage, setCurrentPage }) {
+export default function SideNav({ currentPage, goToPage }) {
   const pageTiming = parseInt(variables.pageTiming);
-
-  const goHome = () => {
-    setCurrentPage('home');
-    setTimeout(() => $(`#${currentPage}Wrapper`).hide(), pageTiming);
-  };
 
   const today = new Date();
   const year = today.getFullYear();
@@ -37,7 +32,7 @@ export default function SideNav({ currentPage, setCurrentPage }) {
         style={{ display: currentPage === 'home' ? 'none' : 'inherit' }}
         className={styles.homeButton}
         id="homeButton"
-        onClick={() => goHome()}
+        onClick={() => goToPage('home')}
       >
         HOME
       </div>

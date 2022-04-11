@@ -14,18 +14,17 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const goToPage = (page) => {
-    if (page !== 'home') {
-      history.pushState(null, '', currentURL);
-    }
+    //set browswer history to record navigation
+    history.pushState(page, '', currentURL);
     setCurrentPage(page);
     $(`#${page}Wrapper`).hide().show();
   };
 
+  //navigate with back and forward buttons through renderings
   window.addEventListener('popstate', (e) => {
     e.preventDefault();
-    console.log(currentPage);
-    setCurrentPage('home');
-    history.replaceState(null, '');
+    const targetPage = history.state;
+    setCurrentPage(targetPage);
   });
 
   useEffect(() => {
@@ -80,7 +79,7 @@ function App() {
           </div>
         </div>
       </div>
-      <SideNav currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <SideNav currentPage={currentPage} goToPage={goToPage} />
     </div>
   );
 }
