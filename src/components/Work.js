@@ -52,6 +52,9 @@ export default function Work() {
             </div>
           );
         })}
+        <div className={styles.mobileMetricClock}>
+          <MetricClock />
+        </div>
       </div>
     </div>
   );

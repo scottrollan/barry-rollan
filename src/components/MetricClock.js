@@ -16,7 +16,7 @@ const MetricClock = () => {
   const mTime = ((h * 3600 + m * 60 + s) / 0.864).toFixed(0);
   const mTimeStr = mTime.toString();
   const mTimeArray = mTimeStr.split('');
-  const mTimeFormatted = `${mTimeArray[0]}.${mTimeArray[1]}${mTimeArray[2]}${mTimeArray[3]}${mTimeArray[4]}`;
+  const mTimeFormatted = `${mTimeArray[0]}:${mTimeArray[1]}${mTimeArray[2]}:${mTimeArray[3]}${mTimeArray[4]}`;
 
   return (
     <span>
@@ -24,10 +24,11 @@ const MetricClock = () => {
       <h1>{mTimeFormatted}</h1>
       <p style={{ margin: '0' }}>For fun, I made a "metric" clock</p>
       <p>
-        It has 10 hours in a day, 100 minutes in an hour and 100 seconds in a
-        minute.
+        It divides the day into 10 metric hours, with 100 metric minutes in an
+        hour and 100 metric seconds in a minute.
       </p>
-      <p>It makes much more sense than our current 24-hour/60-minute setup.</p>
+
+      {/* <p>It makes much more sense than our current 24-hour/60-minute setup.</p>
       <p>
         Some adjustments the world will have to make before adopting this system
         of time:
@@ -40,7 +41,7 @@ const MetricClock = () => {
       </div>
       <div style={{ paddingLeft: '2.5em', marginBottom: '12px' }}>
         "one Mississippi..." will have to change to "one Nevada..."
-      </div>
+      </div> */}
     </span>
   );
 };

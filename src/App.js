@@ -7,13 +7,26 @@ import Contact from './components/Contact';
 import styles from './App.module.scss';
 import animations from './Animations.module.scss';
 
+const currentURL = window.location.href;
+const history = window.history;
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const goToPage = (page) => {
+    if (page !== 'home') {
+      history.pushState(null, '', currentURL);
+    }
     setCurrentPage(page);
     $(`#${page}Wrapper`).hide().show();
   };
+
+  window.addEventListener('popstate', (e) => {
+    e.preventDefault();
+    console.log(currentPage);
+    setCurrentPage('home');
+    history.replaceState(null, '');
+  });
 
   useEffect(() => {
     $('#workWrapper').hide();

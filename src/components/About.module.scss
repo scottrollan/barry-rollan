@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: calc(var(--sideNav) + 1rem) var(--sideNav);
+  margin: calc(var(--sideNav) + 1rem) calc(var(--sideNav) + 1rem);
 }
 .titleWrapper {
   display: flex;
@@ -48,7 +48,7 @@
 }
 
 .aboutMeWords {
-  padding: 0 var(--sideNav);
+  padding: 0 calc(var(--sideNav) + 1rem);
   background-color: var(--black);
   z-index: 2;
 }

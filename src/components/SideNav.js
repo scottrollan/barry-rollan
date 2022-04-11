@@ -17,9 +17,9 @@ export default function SideNav({ currentPage, setCurrentPage }) {
     <div
       className={styles.sideNav}
       id="sideNav"
-      style={{
-        color: currentPage === 'home' ? 'var(--black)' : 'var(--beige)',
-      }}
+      // style={{
+      //   color: currentPage === 'home' ? 'var(--black)' : 'var(--beige)',
+      // }}
     >
       <div>
         <i className="fas fa-copyright"></i> {year}
@@ -43,7 +43,9 @@ export default function SideNav({ currentPage, setCurrentPage }) {
       </div>
       <div
         className={styles.icons}
-        style={{ display: currentPage === 'home' ? 'inherit' : 'none' }}
+        style={{
+          display: currentPage === 'home' ? 'inherit' : 'none',
+        }}
       >
         <a
           href="https://github.com/scottrollan/"

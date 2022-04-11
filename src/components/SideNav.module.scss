@@ -10,7 +10,7 @@
   align-items: center;
   min-width: 100vh;
   height: var(--sideNav);
-  background: transparent;
+  background: var(--beige);
   transform: translateY(var(--yTrans)) translateX(calc(-1 * var(--sideNav)))
     rotate(-90deg);
   transform-origin: var(--sideNav) 0;
