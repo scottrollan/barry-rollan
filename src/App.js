@@ -26,7 +26,7 @@ function App() {
     $(`#${page}Wrapper`).hide().show();
     setTimeout(() => {
       if (page === 'home') {
-        pages.map((p) => {
+        pages.forEach((p) => {
           const page = p.title;
           $(`#${page}Wrapper`).hide();
         });

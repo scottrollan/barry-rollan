@@ -57,7 +57,8 @@
 }
 
 @media (pointer: coarse) {
-  .appWrapper {
+  .home {
+    justify-content: space-around;
   }
   .menuOptions {
     text-align: right;
