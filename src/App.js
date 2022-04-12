@@ -21,23 +21,26 @@ function App() {
   ];
 
   const goToPage = (page) => {
-    history.pushState(page, '', currentURL); //set browswer history to record navigation
+    console.log(`Page from goToPage: "${page}"`);
+    history.pushState(page, ''); //set browswer history to record navigation
     setCurrentPage(page);
-    $(`#${page}Wrapper`).hide().show();
-    setTimeout(() => {
-      if (page === 'home') {
-        pages.forEach((p) => {
-          const page = p.title;
-          $(`#${page}Wrapper`).hide();
-        });
-      }
-    }, variables.pageTiming);
+    if (page === 'work' || page === 'about' || page === 'contact') {
+      $(`#${page}Wrapper`).hide().show();
+    } else {
+      setTimeout(() => {
+        $('#workWrapper').hide();
+        $('#aboutWrapper').hide();
+        $('#contactWrapper').hide();
+      }, variables.pageTiming);
+    }
   };
 
   //navigate with back and forward buttons through renderings
   window.addEventListener('popstate', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const targetPage = history.state;
+    console.log(`Page from event listener: "${JSON.stringify(targetPage)}"`);
+
     goToPage(targetPage);
   });
 
