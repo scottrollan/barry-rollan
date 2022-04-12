@@ -4,6 +4,7 @@ import SideNav from './components/SideNav';
 import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
+import variables from './styles/custom-properties.module.scss';
 import styles from './App.module.scss';
 import animations from './Animations.module.scss';
 
@@ -13,18 +14,31 @@ const history = window.history;
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
+  const pages = [
+    { title: 'work', page: <Work /> },
+    { title: 'about', page: <About /> },
+    { title: 'contact', page: <Contact /> },
+  ];
+
   const goToPage = (page) => {
-    //set browswer history to record navigation
-    history.pushState(page, '', currentURL);
+    history.pushState(page, '', currentURL); //set browswer history to record navigation
     setCurrentPage(page);
     $(`#${page}Wrapper`).hide().show();
+    setTimeout(() => {
+      if (page === 'home') {
+        pages.map((p) => {
+          const page = p.title;
+          $(`#${page}Wrapper`).hide();
+        });
+      }
+    }, variables.pageTiming);
   };
 
   //navigate with back and forward buttons through renderings
   window.addEventListener('popstate', (e) => {
     e.preventDefault();
     const targetPage = history.state;
-    setCurrentPage(targetPage);
+    goToPage(targetPage);
   });
 
   useEffect(() => {
@@ -47,11 +61,7 @@ function App() {
             CONTACT
           </div>
         </div>
-        {[
-          { title: 'work', page: <Work /> },
-          { title: 'about', page: <About /> },
-          { title: 'contact', page: <Contact /> },
-        ].map((opt, i) => {
+        {pages.map((opt, i) => {
           const option = opt.title;
 
           return (

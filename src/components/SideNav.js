@@ -4,8 +4,6 @@ import styles from './SideNav.module.scss';
 import variables from '../styles/custom-properties.module.scss';
 
 export default function SideNav({ currentPage, goToPage }) {
-  const pageTiming = parseInt(variables.pageTiming);
-
   const today = new Date();
   const year = today.getFullYear();
   return (
